@@ -1,0 +1,80 @@
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.tanks-field {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: flex-end;
+  height: 850px;
+  width: 850px;
+  border: 3px solid green;
+  margin: 10px auto;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(227, 242, 243);
+}
+
+.obsticle {
+  background-color: rgb(250, 70, 70);
+  z-index: 100;
+}
+
+.armor-obsticle {
+  color: black;
+  background-color: rgb(241, 181, 15);
+}
+
+.armor-obsticle::before {
+  content: 'armor';
+  color: blue;
+  font-weight: 700;
+  line-height: 50px;
+  padding-left: 2px;
+}
+
+.start {
+  position: absolute;
+  left: 375px;
+  top: 380px;
+  width: 100px;
+  height: 40px;
+  background-color: rgb(92, 223, 87);
+  color: darkgoldenrod;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.tank {
+  transition: .15s;
+  position: absolute;
+  top: 799px;
+  left: 100px;
+  width: 40px;
+  height: 40px;
+  transform: rotate(270deg);
+  display: none;
+}
+.enemy {
+  transform: rotate(180deg);
+  filter: hue-rotate(200deg);
+  z-index: 150;
+}
+.sraka {
+  background-color: aqua;
+}
+
+.bullet {
+  position: absolute;
+  background-color: rgb(15, 104, 238);
+  width: 10px;
+  height: 10px;
+}
